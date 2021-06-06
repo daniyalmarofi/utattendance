@@ -28,18 +28,18 @@ cd utattendance
 python3
 ```
 
-And then in python shell:
+find the path of the input file And then in python shell:
 
 ```python
 from UTAttendance import *
-database = UTAttendance('input_data.csv').save_results('output.csv')
+database = UTAttendance('path/to/input_file.csv').save_results('output.csv')
 ```
 
 Or simply edit and run `main.py` file.
 
 ## Issues
 
-In case of any issues, [Create an issue](https://github.com/daniyalmarofi/utattendance/issues/new/choose)
+In case of any issues, [Create an issue](https://github.com/daniyalmarofi/utattendance/issues/new/choose).
 
 ## About
 
