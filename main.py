@@ -26,11 +26,10 @@ class UTAttendance():
                             ] += item[self.df.columns[-1]]
         return pd.DataFrame.from_dict({'user': users_durations.keys(), 'duration': users_durations.values()})
 
+    def save_results(self,filename='results.csv'):
+        database.calculate_duration()
+        database.convert_to_hour()
+        database.sum_durations().to_csv(filename,index=False)
 
-# %%
+
 database = UTAttendance('data.csv')
-# %%
-database.calculate_duration()
-database.convert_to_hour()
-# %%
-print(database.sum_durations())
